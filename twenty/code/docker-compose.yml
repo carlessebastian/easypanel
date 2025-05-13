@@ -140,6 +140,8 @@ services:
     image: twentycrm/twenty-postgres-spilo:${TAG}
     volumes:
       - db-data:/home/postgres/pgdata
+    ports:
+      - 5434:5432
     environment:
       PGUSER_SUPERUSER: ${PGUSER_SUPERUSER:-postgres}
       PGPASSWORD_SUPERUSER: ${PGPASSWORD_SUPERUSER:-postgres}
